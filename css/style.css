@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+body {
+    margin:0px;
+    background-color:#262321;
+}
+.everything{
+    /* Alignment*/
+    position:absolute;
+    bottom:0px;
+
+    /* Sizing*/
+    width:100%;
+
+    /* Others*/
+}
+.overlay{
+    position: absolute;
+    top: -100px;
+    height: 100px;
+    width: 100%;
+    background-color: #262321;
+    z-index: 10;
+}
+.window{
+    /* Alignment*/
+    position: relative;
+    margin-bottom: 30px;
+    left: 50%;
+    margin-left: -49%;
+
+    /* Sizing*/
+    height:700px;
+    width:98%;
+
+    /* Others*/
+    background-color: #262321;
+    display: grid;
+    grid-column-gap: 20px;
+    
+}
+.window > .panel{
+    background-color: #1A1126;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+.item2{
+    grid-column-start: 2;
+    grid-column-start: 2;
+}
+.item3{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+.moon{
+    position: absolute;
+    top:-30px;
+    left:-45px;
+    height: 250px;
+    width: 250px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+.desk_top{
+    /* Alignment*/
+    position: relative;
+    top: 0px;
+    left: 50%;
+    margin-left: -500px;
+
+    /* Sizing*/
+    width:800px;
+
+    /* Others*/
+    border-bottom: 100px solid #BF9D8A;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    z-index: 100;
+}
+.desk_bottom{
+    /* Alignment*/
+    position: relative;
+    top:0px;
+    left: 50%;
+    margin-left: -500px;
+
+    /* Sizing*/
+    width:1000px;
+
+    /* Others*/
+    height: 30px;
+    background-color: #8C6E68;
+    z-index: 10;
+}
+.computer{
+    /* Alignment*/
+    position: absolute;
+    bottom: 15px;
+    left:50%;
+    margin-left: -200px;
+
+    /* Sizing*/
+    height: 250px;
+    width:400px;
+
+    /* Others*/
+    background-color: #F2F2EB;
+    border-radius: 15px;
+}
+.computer_content{
+    /* Alignment*/
+    margin:auto;
+    margin-top:15px;
+
+    /* Sizing*/
+    height: 220px;
+    width: 370px;
+    
+    /* Others*/
+    background-color: dimgray;
+    border-radius: 15px;
+}
+.computer_stand{
+    /* Alignment*/
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    margin-top:15px;
+
+    /* Sizing*/
+    height: 30px;
+    width: 20px;
+
+    /* Others*/
+    background-color: dimgray;
+    z-index: 5;
+}
+.computer_base_1{
+    /* Alignment*/
+    position: absolute;
+    bottom: -38px;
+    left:50%;
+    margin-left: -50px;
+
+    /* Sizing*/
+    width: 80px;
+
+    /* Others*/
+    border-bottom: 20px solid #262321;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.computer_base_2{
+    /* Alignment*/
+    margin: auto;
+    margin-top: 47px;
+    /* Sizing*/
+    height: 15px;
+    width: 100px;
+
+    /* Others*/
+    background-color: #262321;
+    border-radius: 10px;
+}
+.keyboard{
+    /* Alignment*/
+    position: absolute;
+    top:40px;
+    left:50%;
+    margin-left: -150px;
+
+    /* Sizing*/
+    width: 270px;
+
+    /* Others*/
+    border-bottom: 30px solid #F2F2EB;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+.keyboard_base{
+    /* Alignment*/
+    position: absolute;
+    top:68px;
+    left:50%;
+    margin-left: -150px;
+
+    /* Sizing*/
+    width: 300px;
+    height: 6px;
+
+    /* Others*/
+    background-color:#262321;
+    border-radius: 10px;
+}
+.mouse{
+    /* Alignment*/
+    position: absolute;
+    top:35px;
+    left:50%;
+    margin-left: 180px;
+
+    /* Sizing*/
+    height: 45px;
+    width: 30px;
+    
+
+    /* Others*/
+    background-color: #F2F2EB;
+    transform: skewX(20deg);
+    border-radius: 50%;
+    border-bottom: 3px solid #262321;
+    box-shadow: -1px 1px #262321;
+}
+.phone{
+    /* Alignment*/
+    position: absolute;
+    top:20px;
+    left:50%;
+    margin-left: 250px;
+
+    /* Sizing*/
+    height: 65px;
+    width: 40px;
+
+    /* Others*/
+    background-color: #F2F2EB;
+    border-radius: 3px;
+    transform: skewX(35deg);
+    box-shadow: -1px 1px #262321;
+}
+.phone_speaker{
+    /* Alignment*/
+    margin:auto;
+    margin-top:2px;
+
+    /* Sizing*/
+    height: 2px;
+    width: 10px;
+
+    /* Others*/
+    background-color: black;
+    border-radius: 5px;
+}
+.phone_content{
+    /* Alignment*/
+    margin:auto;
+    margin-top:2px;
+    
+    /* Sizing*/
+    height: 50px;
+    width: 33px;
+
+    /* Others*/
+    background-color: black;
+    border-radius: 5px;
+}
+.phone_button{
+    /* Alignment*/
+    margin:auto;
+    margin-top:2px;
+    
+    /* Sizing*/
+    height: 5px;
+    width: 5px;
+
+    /* Others*/
+    background-color: black;
+    border-radius: 5px;
+}
+.notebook{
+
+}
