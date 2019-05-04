@@ -42,6 +42,16 @@ body {
 }
 .window > .panel{
     background-color: #1A1126;
+    background-color: #131226 !important;
+    border-bottom: 5px solid #403B37;
+    box-shadow: 0px 5px #332F2C;
+}
+.building{
+    position: absolute;
+    bottom:5px;
+    height: 550px;
+    width: 10%;
+    background-color: #383570;
 }
 .item1{
     grid-column-start: 1;
@@ -75,7 +85,7 @@ body {
     width:800px;
 
     /* Others*/
-    border-bottom: 100px solid #BF9D8A;
+    border-bottom: 100px solid #73604B;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     z-index: 100;
@@ -92,7 +102,7 @@ body {
 
     /* Others*/
     height: 30px;
-    background-color: #8C6E68;
+    background-color: #403529;
     z-index: 10;
 }
 .computer{
@@ -107,7 +117,7 @@ body {
     width:400px;
 
     /* Others*/
-    background-color: #F2F2EB;
+    background-color: #FFEBDC;
     border-radius: 15px;
 }
 .computer_content{
@@ -120,7 +130,7 @@ body {
     width: 370px;
     
     /* Others*/
-    background-color: dimgray;
+    background-color: slategrey;
     border-radius: 15px;
 }
 .computer_stand{
@@ -176,7 +186,7 @@ body {
     width: 270px;
 
     /* Others*/
-    border-bottom: 30px solid #F2F2EB;
+    border-bottom: 30px solid #FFEBDC;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
 }
@@ -189,10 +199,10 @@ body {
 
     /* Sizing*/
     width: 300px;
-    height: 6px;
+    height: 4px;
 
     /* Others*/
-    background-color:#262321;
+    background-color:#403529;
     border-radius: 10px;
 }
 .mouse{
@@ -208,11 +218,11 @@ body {
     
 
     /* Others*/
-    background-color: #F2F2EB;
+    background-color: #FFEBDC;
     transform: skewX(20deg);
     border-radius: 50%;
-    border-bottom: 3px solid #262321;
-    box-shadow: -1px 1px #262321;
+    border-bottom: 3px solid #403529;
+    box-shadow: -1px 1px #403529;
 }
 .phone{
     /* Alignment*/
@@ -226,10 +236,10 @@ body {
     width: 40px;
 
     /* Others*/
-    background-color: #F2F2EB;
+    background-color: #FFEBDC;
     border-radius: 3px;
     transform: skewX(35deg);
-    box-shadow: -1px 1px #262321;
+    box-shadow: -1px 1px #403529;
 }
 .phone_speaker{
     /* Alignment*/
@@ -241,7 +251,7 @@ body {
     width: 10px;
 
     /* Others*/
-    background-color: black;
+    background-color: slategrey;
     border-radius: 5px;
 }
 .phone_content{
@@ -254,7 +264,7 @@ body {
     width: 33px;
 
     /* Others*/
-    background-color: black;
+    background-color: slategrey;
     border-radius: 5px;
 }
 .phone_button{
@@ -267,9 +277,78 @@ body {
     width: 5px;
 
     /* Others*/
-    background-color: black;
+    background-color: slategrey;
     border-radius: 5px;
 }
 .notebook{
+    /* Alignment*/
+    position: absolute;
+    top:10px;
+    left:50%;
+    margin-left: -300px;
 
+    /* Sizing*/
+    height: 80px;
+    width: 80px;
+
+    /* Others*/
+    background-color: #423020;
+    border-radius: 3px;
+    transform: skewX(-35deg);
+}
+.notebook_top{
+    top:2px;
+    z-index: 40;
+}
+.notebook_pages1{
+    top:3px;
+    background-color: white;
+    z-index: 39;
+    width: 79px;
+}
+.notebook_pages2{
+    top:4px;
+    background-color: white;
+    z-index: 39;
+    width: 79px;
+}
+.notebook_pages3{
+    top:5px;
+    background-color: white;
+    z-index: 39;
+    width: 79px;
+}
+.notebook_pages4{
+    top:6px;
+    background-color: white;
+    z-index: 39;
+    width: 79px;
+}
+.notebook_pages5{
+    top:7px;
+    background-color: white;
+    z-index: 39;
+    width: 79px;
+}
+.notebook_pages6{
+    top:8px;
+    background-color: white;
+    z-index: 39;
+    width: 79px;
+}
+.notebook_edge{
+    /* Alignment*/
+    position: absolute;
+    top:79px;
+    left:50%;
+    margin-left: -327px;
+
+    /* Sizing*/
+    height: 10px;
+    width: 2px;
+
+    /* Others*/
+    background-color: #423020;
+    border-radius: 3px 0px 0px 3px;
+    z-index: 40;
 }
