@@ -60,6 +60,114 @@ body {
     height: 200px;
     width: 100%;
 }
+.sky{
+    /* Alignment*/
+    position: absolute;
+
+    /* Sizing*/
+    height:700px;
+    width:100%;
+
+    /* Others*/
+    z-index: 35;
+    overflow: hidden;
+}
+.cloud{
+    /* Alignment*/
+    position: absolute;
+    left:70px;
+    /* Sizing*/
+    width: 100px;
+    height: 100px;
+
+    /* Others*/
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.45;
+}
+.cloud::after{
+    /* Alignment*/
+    position: absolute;
+    top:50px;
+    left:-70px;
+
+    /* Sizing*/
+    width: 200px;
+    height: 60px;
+
+     /* Others*/
+    content:"";
+    background-color: white;
+    border-radius: 60px;
+}
+.cloud::before{
+    /* Alignment*/
+    position: absolute;
+    left:-40px;
+    top:20px;
+
+    /* Sizing*/
+    width: 70px;
+    height: 70px;
+
+    /* Others*/
+    content:"";
+    background-color: white;
+    border-radius: 50%;
+}
+.c1{
+    top:30px;
+    right:100px;
+    -webkit-animation: animateCloud 30s linear infinite;
+	-moz-animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linear infinite;
+}
+.c2{
+    top:90px;
+    -webkit-animation: animateCloud 45s linear infinite;
+	-moz-animation: animateCloud 45s linear infinite;
+	animation: animateCloud 45s linear infinite;
+}
+.c3{
+    top:140px;
+    right: 200px;
+    -webkit-animation: animateCloud 50s linear infinite;
+	-moz-animation: animateCloud 50s linear infinite;
+	animation: animateCloud 50s linear infinite;
+}
+.c4{
+    top:200px;
+    right:360px;
+    -webkit-animation: animateCloud 35s linear infinite;
+	-moz-animation: animateCloud 35s linear infinite;
+	animation: animateCloud 35s linear infinite;
+}
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -400px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -400px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -400px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
 .window{
     /* Alignment*/
     position: relative;
