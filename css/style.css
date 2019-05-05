@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 
+:root {
+    --main-bg-color: coral; 
+
+    /* Building Colors*/
+    --back-building-color:#1E1D3D;
+    --front-building-color: #242F54;
+    --third-building-color: #492559;
+    --second-building-color: #332454;
+  }
 body {
     margin:0px;
     background-color:#262321;
@@ -12,27 +21,58 @@ body {
 
     /* Sizing*/
     width:100%;
+}
+.shadow_effect{
+    /* Alignment*/
+    position:absolute;
+    bottom:0px;
+
+    /* Sizing*/
+    width:100%;
+    height: 100vh;
 
     /* Others*/
+    -moz-box-shadow:    inset 0 0 250px #000000;
+    -webkit-box-shadow: inset 0 0 250px #000000;
+    box-shadow:         inset 0 0 250px #000000;
+    z-index: 9000;
 }
 .overlay{
     position: absolute;
-    top: -100px;
-    height: 100px;
-    width: 100%;
     background-color: #262321;
-    z-index: 10;
+    z-index: 100;
+}
+.vertical{
+    height: 700px;
+    width:20px
+}
+.ov2{
+    left:20px;
+}
+.ov3{
+    left:40px;
+}
+.ov4{
+    left:60px;
+}
+.horizontal{
+    top: -200px;
+    height: 200px;
+    width: 100%;
 }
 .window{
     /* Alignment*/
     position: relative;
     margin-bottom: 30px;
     left: 50%;
-    margin-left: -49%;
+    margin-left: -50%;
 
     /* Sizing*/
     height:700px;
-    width:98%;
+    width:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 
     /* Others*/
     background-color: #262321;
@@ -49,9 +89,84 @@ body {
 .building{
     position: absolute;
     bottom:5px;
-    height: 550px;
+}
+.b1{
+    height: 500px;
     width: 10%;
-    background-color: #383570;
+    background-color: var(--back-building-color);
+}
+.b2{
+    height: 325px;
+    width: 10%;
+    background-color: var(--front-building-color);
+    left: 6%;
+    z-index: 20;
+}
+.b3{
+    height: 400px;
+    width: 10%;
+    background-color: var(--second-building-color);
+    left: 10%;
+}
+.b4{
+    height: 350px;
+    width: 15%;
+    background-color: var(--third-building-color);
+    left: 25%;
+}
+.b5{
+    height: 550px;
+    width: 12%;
+    background-color: var(--back-building-color);
+    left: 45%;
+    z-index: 20;
+}
+.b6{
+    height: 450px;
+    width: 10%;
+    background-color: var(--third-building-color);
+    left: 53%;
+    z-index: 21;
+}
+.b7{
+    height: 275px;
+    width: 30%;
+    background-color: var(--front-building-color);
+    left: 48%;
+    z-index: 22;
+}
+.b8{
+    height: 400px;
+    width: 10%;
+    background-color: var(--second-building-color);
+    left: 70%;
+}
+.b9{
+    height: 500px;
+    width: 8%;
+    background-color: var(--third-building-color);
+    left: 82%;
+}
+.b10{
+    height: 200px;
+    width: 30%;
+    background-color: var(--back-building-color);
+    left: 70%;
+    z-index: 25;
+}
+.b11{
+    height: 600px;
+    width: 10%;
+    background-color: var(--front-building-color);
+    left: 90%;
+    z-index: 24;
+}
+.b12{
+    height: 150px;
+    width: 25%;
+    background-color: var(--back-building-color);
+    left:12%;
+    z-index: 26;
 }
 .item1{
     grid-column-start: 1;
@@ -67,10 +182,10 @@ body {
 }
 .moon{
     position: absolute;
-    top:-30px;
-    left:-45px;
-    height: 250px;
-    width: 250px;
+    top:-120px;
+    left:-25px;
+    height: 300px;
+    width: 300px;
     background-color: #bbb;
     border-radius: 50%;
 }
