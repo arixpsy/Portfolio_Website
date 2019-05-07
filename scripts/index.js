@@ -19,4 +19,118 @@ $(document).ready(function(){
         $(".ov4").css("margin-left", panelLength3+"px");
     });
 
+    $(".computer").on('click', function() {
+        openComputer();
+    });
+
+    $(".browser_cross").on('click', function() {
+        closeComputer();
+    });
+
+    $(".phone").on('click', function(){
+        openPhone();
+    });
+
+    $(".phone_exit").on('click', function(){
+        closePhone();
+    })
+    
+    
 });
+
+function openComputer(){
+    $(".computer").animate({
+        "bottom":"0px",
+        "height":"100vh",
+        "width":"100vw",
+        "margin-left":"-50vw"
+    });
+    $(".shadow_effect").animate({opacity:"0"});
+    $(".browser").animate({opacity:"1"});
+    $(".browser_cross").animate({opacity:"1"});
+};
+
+
+function closeComputer(){
+    $(".browser_cross").css("opacity","0");
+    $(".browser").animate({opacity:"0"});
+    $(".computer").animate({
+        "bottom":"145px",
+        "height":"250px",
+        "width":"400",
+        "margin-left":"-200px"
+    });
+    $(".shadow_effect").animate({opacity:"1"});
+};
+
+function openPhone(){
+
+    $(".phone").css("transform","skewX(0deg)")
+    $(".phone").css("box-shadow","none")
+    $(".phone").css("z-index","300")
+    $(".phone").animate({
+        "bottom":"2vh",
+        "height":"96vh",
+        "width":"30vw",
+        "margin-left":"-15vw",
+    });
+
+    $(".phone_speaker").animate({
+        "height":"2vh",
+        "width":"12vw",
+        "margin-top":"1vw"
+    });
+    $(".phone_content").animate({
+        "height":"80vh",
+        "width":"28vw",
+        "margin-top":"1vw"
+    });
+    $(".phone_button").animate({
+        "height":"5vh",
+        "width":"5vh",
+        "margin-top":"2vh"
+    });
+   
+    $(".shadow_effect").animate({opacity:"0"},"slow");
+    $(".phone_exit").css("pointer-events","auto");
+    $(".phone_exit").animate({
+        "opacity":"0.7"
+    });
+}
+
+function closePhone(){
+    $(".phone_exit").animate({
+        "opacity":"0"
+    });
+    $(".phone_exit").css("pointer-events","none");
+    $(".shadow_effect").animate({opacity:"1"},"slow");
+
+
+    $(".phone_button").animate({
+        "height":"5px",
+        "width":"5px",
+        "margin-top":"2px"
+    });
+    $(".phone_content").animate({
+        "height":"50px",
+        "width":"33px",
+        "margin-top":"2px"
+    });
+    $(".phone_speaker").animate({
+        "height":"2px",
+        "width":"10px",
+        "margin-top":"2px"
+    });
+    $(".phone").animate({
+        "bottom":"45px",
+        "height":"65px",
+        "width":"40px",
+        "margin-left":"250px"
+    });
+    $(".phone").promise().done(function()
+    {
+        $(".phone").css("z-index","110")
+        $(".phone").css("transform","skewX(35deg)")
+    });
+    
+}
