@@ -45,6 +45,7 @@ function openComputer(){
         "width":"100vw",
         "margin-left":"-50vw"
     });
+    $(".computer").css("cursor","default");
     $(".shadow_effect").animate({opacity:"0"});
     $(".browser").animate({opacity:"1"});
     $(".browser_cross").animate({opacity:"1"});
@@ -54,6 +55,7 @@ function openComputer(){
 function closeComputer(){
     $(".browser_cross").css("opacity","0");
     $(".browser").animate({opacity:"0"});
+    $(".computer").css("cursor","pointer");
     $(".computer").animate({
         "bottom":"145px",
         "height":"250px",
@@ -64,10 +66,15 @@ function closeComputer(){
 };
 
 function openPhone(){
+    $(".phone_hover").css('animation','none');
 
-    $(".phone").css("transform","skewX(0deg)")
-    $(".phone").css("box-shadow","none")
-    $(".phone").css("z-index","300")
+    $(".phone").css({
+        "transform":"skewX(0deg)",
+        "box-shadow":"none",
+        "z-index":"300",
+        "cursor":"default"
+    });
+
     $(".phone").animate({
         "bottom":"2vh",
         "height":"96vh",
@@ -92,7 +99,9 @@ function openPhone(){
     });
    
     $(".shadow_effect").animate({opacity:"0"},"slow");
+
     $(".phone_exit").css("pointer-events","auto");
+
     $(".phone_exit").animate({
         "opacity":"0.7"
     });
@@ -103,8 +112,8 @@ function closePhone(){
         "opacity":"0"
     });
     $(".phone_exit").css("pointer-events","none");
-    $(".shadow_effect").animate({opacity:"1"},"slow");
 
+    $(".shadow_effect").animate({opacity:"1"},"slow");
 
     $(".phone_button").animate({
         "height":"5px",
@@ -129,8 +138,17 @@ function closePhone(){
     });
     $(".phone").promise().done(function()
     {
-        $(".phone").css("z-index","110")
-        $(".phone").css("transform","skewX(35deg)")
+        $(".phone").css({
+            "z-index":"110",
+            "transform":"skewX(35deg)",
+            "box-shadow":"-1px 1px var(--desk-shade-color)",
+            "cursor":"pointer"
+        });
+        $(".phone_hover").css({
+            "animation":"notification",
+            "animation-duration":"8s",
+            "animation-iteration-count":"infinite"
+        });
     });
     
 }

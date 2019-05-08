@@ -17,7 +17,7 @@
 
     /* Device Colors */    
     --device-color: #FFEBDC;
-    --device-screen: slategrey;
+    --device-screen: #262321;
     --note-book-cover: #423020; 
 
     /* Browser Colors */
@@ -93,6 +93,7 @@ body {
     /* Others*/
     z-index: 35;
     overflow: hidden;
+    pointer-events: none;
 }
 .cloud{
     /* Alignment*/
@@ -318,6 +319,10 @@ body {
     background-color: var(--moon-color);
     border-radius: 50%;
 }
+.moon:hover{
+    background-color: #d9d8d0;
+    cursor: pointer;
+}
 .desk_top{
     /* Alignment*/
     position: absolute;
@@ -366,6 +371,9 @@ body {
     border: 15px solid var(--device-color);
     border-radius: 15px;
     z-index: 150;
+    cursor: pointer;
+}
+.computer:hover{
 }
 .browser{
     border: 3px solid var(--browser-border);
@@ -401,6 +409,7 @@ body {
     top:30px;
     z-index: 200;
     opacity: 0;
+    cursor: pointer;
 }
 .browser_cross::after {
     position: absolute;;
@@ -536,10 +545,55 @@ body {
     box-shadow: -1px 1px var(--desk-shade-color);
     z-index: 110;
     transition: all 0s ease 0s;
+    cursor: pointer;
 }
-.phone:hover{
-    
+.phone_hover{
+    /* Alignment*/
+    position: absolute;
+    bottom: 72px;
+    left:50%;
+    margin-left: 257px;
+
+    /* Sizing*/
+    height: 15px;
+    width: 23px;
+
+    transform: skewX(35deg);
+    background-color: limegreen;
+    border-radius: 5px;
+    z-index: 111;
+    opacity: 0;
+    animation: notification;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    pointer-events: none;
 }
+.phone_hover::after{
+    position: absolute;
+    content: '';
+    border-top: 6px solid limegreen;
+    border-right: 5px solid transparent;
+    left:4px;
+    top:14px;
+    pointer-events: none;
+}
+@keyframes notification {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
 .phone_speaker{
     /* Alignment*/
     margin:auto;
