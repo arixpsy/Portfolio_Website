@@ -10,6 +10,10 @@
     --front-building-color: #242F54;
     --third-building-color: #492559;
     --second-building-color: #332454;
+    --back-building-light:lightsalmon;
+    --front-building-light: papayawhip;
+    --third-building-light: lightcoral;
+    --second-building-light: thistle;
 
     /* Desk Colors*/
     --desk-top-color: #73604B;
@@ -25,6 +29,9 @@
 
     /* Sky Colors */
     --moon-color: #bbb;
+    --sky-night: #131226;
+    --sun-color: #F2EF88;
+    --sky-day: skyblue;
   }
 body {
     margin:0px;
@@ -79,7 +86,7 @@ body {
     left:60px;
 }
 .horizontal{
-    height: 200px;
+    height: 550px;
     width: 100%;
 }
 .sky{
@@ -211,10 +218,11 @@ body {
     grid-column-gap: 20px;
     
 }
-.window > .panel{
-    background-color: #131226 !important;
+.panel{
+    background-color: var(--sky-night);
     border-bottom: 5px solid #403B37;
     box-shadow: 0px 5px #332F2C;
+    
 }
 .building{
     position: absolute;
@@ -318,6 +326,17 @@ body {
     width: 300px;
     background-color: var(--moon-color);
     border-radius: 50%;
+}
+.sun{
+    position: absolute;
+    top:150px;
+    left:-500px;
+    height: 300px;
+    width: 300px;
+    background-color: var(--sun-color);
+    box-shadow: #F2EF88 2px 2px 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .moon:hover{
     background-color: #d9d8d0;
@@ -718,4 +737,13 @@ body {
     background-color: var(--note-book-cover);
     border-radius: 3px 0px 0px 3px;
     z-index: 121;
+}
+
+@keyframes skyChangeToDay{
+    0%   {background-color: var(--sky-night);}
+    100%   {background-color: var(--sky-day)}
+}
+@keyframes skyChangeToNight{
+    0%   {background-color: var(--sky-day)}
+    100%   {background-color: var(--sky-night);}
 }

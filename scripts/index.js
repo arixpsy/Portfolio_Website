@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var currentstate = "night";
+
 
     $(".ov2").css("margin-left", $(".panel").css("width"));
     var panelLength = $(".panel").css("width");
@@ -34,6 +36,16 @@ $(document).ready(function(){
     $(".phone_exit").on('click', function(){
         closePhone();
     })
+
+    $(".moon").on('click', function(){
+        skychange('toDay');
+        MoonSunToggle('toDay');
+    });
+
+    $(".sun").on('click', function(){
+        skychange('toNight');
+        MoonSunToggle('toNight');
+    });
     
     
 });
@@ -151,4 +163,45 @@ function closePhone(){
         });
     });
     
+}
+
+function skychange(to){
+    if(to === 'toDay'){
+        $(".shadow_effect").animate({opacity:"0"});
+        $(".panel").css({
+            "animation" : "skyChangeToDay",
+            "animation-duration": "1s",
+            "animation-fill-mode": "forwards"
+        });
+        
+    }else{
+        $(".shadow_effect").animate({opacity:"1"});
+        $(".panel").css({
+            "animation" : "skyChangeToNight",
+            "animation-duration": "1s",
+            "animation-fill-mode": "forwards"
+        });
+    }
+}
+
+function MoonSunToggle(to){
+    if(to === 'toDay'){
+        $(".moon").animate({
+            "top":"-500px",
+            "left":"500px"
+        });
+        $(".sun").animate({
+            "top":"-120px",
+            "left":"-25px"
+        });
+    }else{
+        $(".moon").animate({
+            "top":"-120px",
+            "left":"-25px"
+        });
+        $(".sun").animate({
+            "top":"150px",
+            "left":"-500px"
+        });
+    }
 }
