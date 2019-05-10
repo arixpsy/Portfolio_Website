@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
-
+iframe{
+    height: 80vh;
+    width: 28vw;
+    display:none;
+}
 :root {
     /* Room Colors*/
     --inner-room-color: #262321;
@@ -32,7 +36,55 @@
     --sky-night: #131226;
     --sun-color: #F2EF88;
     --sky-day: skyblue;
-  }
+
+    /* EQ gradient colors*/
+    --eq1-day: #ef7f7f;
+    --eq2-day: #f0a182;
+    --eq3-day: #f1c184;
+    --eq4-day: #f2e087;
+    --eq5-day: #e6f289;
+    --eq6-day: #cbf38c;
+    --eq7-day: #b0f48e;
+    --eq8-day: #96f591;
+    --eq9-day: #93f5aa;
+    --eq10-day: #96f6c7;
+    --eq11-day: #99f7e2;
+    --eq12-day: #9bf1f7;
+    --eq13-day: #9ed9f8;
+    --eq14-day: #a0c2f9;
+    --eq15-day: #a3acf9;
+    --eq16-day: #b5a6fa;
+    --eq17-day: #cea8fb;
+    --eq18-day: #e6abfc;
+    --eq19-day: #fcadfb;
+    --eq20-day: #fdb0e7;
+    --eq21-day: #feb3d3;
+    --eq22-day: #ffb6c0;
+
+    --eq1-night: #ff073a;
+    --eq2-night: #fe1506;
+    --eq3-night: #fe5706;
+    --eq4-night: #fe9906;
+    --eq5-night: #fedc05;
+    --eq6-night: #defe05;
+    --eq7-night: #9cfe05;
+    --eq8-night: #59fe04;
+    --eq9-night: #16fe04;
+    --eq10-night: #04fe35;
+    --eq11-night: #04fe77;
+    --eq12-night: #03feba;
+    --eq13-night: #03fefd;
+    --eq14-night: #03bcfe;
+    --eq15-night: #0279fe;
+    --eq16-night: #0236fe;
+    --eq17-night: #1102fe;
+    --eq18-night: #5402fe;
+    --eq19-night: #9701fe;
+    --eq20-night: #db01fe;
+    --eq21-night: #fe01dd;
+    --eq22-night: #fe0099;
+
+}
 body {
     margin:0px;
     background-color: var(--inner-room-color);
@@ -373,6 +425,33 @@ body {
     background-color: var(--desk-shade-color);
     z-index: 10;
 }
+.screen_saver{
+    /* Alignment*/
+    position: absolute;
+    bottom: 160px;
+    left:50%;
+    margin-left: -185px;
+
+    /* Sizing*/
+    height: 220px;
+    width: 370px;
+
+    /* Others*/
+    box-sizing: border-box;
+    z-index: 151;
+    pointer-events: none;
+}
+.digital_clock{
+    box-sizing: border-box;
+    padding:15px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #806D8C;
+    text-shadow: 0px 0px 5px #492559;
+    font-size: 22px;
+    height: 35%;
+    width: 100%;
+    text-align: center;
+}
 .computer{
     /* Alignment*/
     position: absolute;
@@ -392,8 +471,7 @@ body {
     z-index: 150;
     cursor: pointer;
 }
-.computer:hover{
-}
+
 .browser{
     border: 3px solid var(--browser-border);
     opacity: 0;
@@ -746,4 +824,107 @@ body {
 @keyframes skyChangeToNight{
     0%   {background-color: var(--sky-day)}
     100%   {background-color: var(--sky-night);}
+}
+.equalizer{
+    margin: auto;
+    height: 65%;
+    width: 90%;
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    grid-column-gap: 5px;
+}
+.eqbar{
+    align-self: end;
+    grid-row:1;
+    bottom: 30%;
+    width: 10px;
+}
+.eq1{
+    background-color: #ef7f7f;
+    height: 15%;
+}
+.eq2{
+    background-color: #f0a182;
+    height: 66%;
+}
+.eq3{
+    background-color: #f1c184;
+    height: 35%;
+}
+.eq4{
+    background-color: #f2e087;
+    height:65%;
+}
+.eq5{
+    background-color: #e6f289;
+    height:41%;
+}
+.eq6{
+    background-color: #cbf38c;
+    height:17%;
+}
+.eq7{
+    background-color: #b0f48e;
+    height: 59%;
+}
+.eq8{
+    background-color: #96f591;
+    height: 65%;
+}
+.eq9{
+    background-color: #93f5aa;
+    height:10%;
+}
+.eq10{
+    background-color: #96f6c7;
+    height: 35%;
+}
+.eq11{
+    background-color: #99f7e2;
+    height: 24%;
+}
+.eq12{
+    background-color: #9bf1f7;
+    height: 47%;
+}
+.eq13{
+    background-color: #9ed9f8;
+    height:64%;
+}
+.eq14{
+    background-color: #a0c2f9;
+    height: 15%;
+}
+.eq15{
+    background-color: #a3acf9;
+    height: 13%
+}
+.eq16{
+    background-color: #b5a6fa;
+    height: 9%;
+}
+.eq17{
+    background-color: #cea8fb;
+    height: 79%;
+}
+.eq18{
+    background-color: #e6abfc;
+    height: 28%;
+}
+.eq19{
+    background-color: #fcadfb;
+    height: 45%;
+}
+.eq20{
+    background-color: #fdb0e7;
+    height: 54%;
+}
+.eq21{
+    background-color: #feb3d3;
+    height: 75%;
+}
+.eq22{
+    background-color: #ffb6c0;
+    height: 28%;
 }

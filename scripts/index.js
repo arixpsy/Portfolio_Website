@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     var currentstate = "night";
 
 
@@ -26,7 +27,7 @@ $(document).ready(function(){
     });
 
     $(".browser_cross").on('click', function() {
-        closeComputer();
+        closeComputer(currentstate);
     });
 
     $(".phone").on('click', function(){
@@ -34,17 +35,19 @@ $(document).ready(function(){
     });
 
     $(".phone_exit").on('click', function(){
-        closePhone();
+        closePhone(currentstate);
     })
 
     $(".moon").on('click', function(){
         skychange('toDay');
         MoonSunToggle('toDay');
+        currentstate = 'day';
     });
 
     $(".sun").on('click', function(){
         skychange('toNight');
         MoonSunToggle('toNight');
+        currentstate = 'day';
     });
     
     
@@ -64,7 +67,7 @@ function openComputer(){
 };
 
 
-function closeComputer(){
+function closeComputer(currentstate){
     $(".browser_cross").css("opacity","0");
     $(".browser").animate({opacity:"0"});
     $(".computer").css("cursor","pointer");
@@ -74,7 +77,9 @@ function closeComputer(){
         "width":"400",
         "margin-left":"-200px"
     });
-    $(".shadow_effect").animate({opacity:"1"});
+    if(currentstate !='day'){
+        $(".shadow_effect").animate({opacity:"1"});
+    }
 };
 
 function openPhone(){
@@ -117,15 +122,18 @@ function openPhone(){
     $(".phone_exit").animate({
         "opacity":"0.7"
     });
+
+    $("iframe").fadeIn();
 }
 
-function closePhone(){
+function closePhone(currentstate){
+    $("iframe").fadeOut();
+
     $(".phone_exit").animate({
         "opacity":"0"
     });
-    $(".phone_exit").css("pointer-events","none");
 
-    $(".shadow_effect").animate({opacity:"1"},"slow");
+    $(".phone_exit").css("pointer-events","none");
 
     $(".phone_button").animate({
         "height":"5px",
@@ -162,7 +170,10 @@ function closePhone(){
             "animation-iteration-count":"infinite"
         });
     });
-    
+
+    if(currentstate !='day'){
+        $(".shadow_effect").animate({opacity:"1"});
+    }
 }
 
 function skychange(to){
