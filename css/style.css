@@ -443,8 +443,8 @@ body {
     box-sizing: border-box;
     padding:15px;
     font-family: 'Share Tech Mono', monospace;
-    color: #806D8C;
-    text-shadow: 0px 0px 5px #492559;
+    color: hotpink;
+    text-shadow: 0px 0px 5px plum;
     font-size: 22px;
     height: 35%;
     width: 100%;
@@ -817,10 +817,10 @@ body {
 
 @keyframes skyChangeToDay{
     0%   {background-color: var(--sky-night);}
-    100%   {background-color: var(--sky-day)}
+    100%   {background-color: var(--sky-day);}
 }
 @keyframes skyChangeToNight{
-    0%   {background-color: var(--sky-day)}
+    0%   {background-color: var(--sky-day);}
     100%   {background-color: var(--sky-night);}
 }
 .equalizer{
@@ -839,90 +839,310 @@ body {
     width: 10px;
 }
 .eq1{
-    background-color: #ef7f7f;
+    background-color: var(--eq1-night);
     height: 15%;
+    animation: eq1ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq1ani{
+    0%   {height: 15%;}
+    25%   {height: 55%;}
+    50%   {height: 3%;}
+    75%   {height: 32%;}
+    100%   {height: 15%;}
 }
 .eq2{
-    background-color: #f0a182;
-    height: 66%;
+    background-color: var(--eq2-night);
+    height: 37%;
+    animation: eq2ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq2ani{
+    0%   {height: 37%;}
+    25%   {height: 22%;}
+    50%   {height: 80%;}
+    75%   {height: 66%;}
+    100%   {height: 37%;}
 }
 .eq3{
-    background-color: #f1c184;
-    height: 35%;
+    background-color: var(--eq3-night);
+    height: 77%;
+    animation: eq3ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq3ani{
+    0%   {height: 77%;}
+    25%   {height: 43%;}
+    50%   {height: 53%;}
+    75%   {height: 21%;}
+    100%   {height: 77%;}
 }
 .eq4{
-    background-color: #f2e087;
+    background-color: var(--eq4-night);
     height:65%;
+    animation: eq4ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq4ani{
+    0%   {height: 65%;}
+    25%   {height: 15%;}
+    50%   {height: 54%;}
+    75%   {height: 3%;}
+    100%   {height: 65%;}
 }
 .eq5{
-    background-color: #e6f289;
-    height:41%;
+    background-color: var(--eq5-night);
+    height:80%;
+    animation: eq5ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq5ani{
+    0%   {height: 80%;}
+    25%   {height: 21%;}
+    50%   {height: 56%;}
+    75%   {height: 19%;}
+    100%   {height: 80%;}
 }
 .eq6{
-    background-color: #cbf38c;
-    height:17%;
+    background-color: var(--eq6-night);
+    height:66%;
+    animation: eq6ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq6ani{
+    0%   {height: 66%;}
+    25%   {height: 16%;}
+    50%   {height: 1%;}
+    75%   {height: 43%;}
+    100%   {height: 66%;}
 }
 .eq7{
-    background-color: #b0f48e;
+    background-color: var(--eq7-night);
     height: 59%;
+    animation: eq7ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq7ani{
+    0%   {height: 59%;}
+    25%   {height: 51%;}
+    50%   {height: 10%;}
+    75%   {height: 20%;}
+    100%   {height: 59%;}
 }
 .eq8{
-    background-color: #96f591;
+    background-color: var(--eq8-night);
     height: 65%;
+    animation: eq8ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq8ani{
+    0%   {height: 65%;}
+    25%   {height: 24%;}
+    50%   {height: 0%;}
+    75%   {height: 29%;}
+    100%   {height: 65%;}
 }
 .eq9{
-    background-color: #93f5aa;
+    background-color: var(--eq9-night);
     height:10%;
+    animation: eq9ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq9ani{
+    0%   {height: 10%;}
+    25%   {height: 69%;}
+    50%   {height: 7%;}
+    75%   {height: 61%;}
+    100%   {height: 10%;}
 }
 .eq10{
-    background-color: #96f6c7;
+    background-color: var(--eq10-night);
     height: 35%;
+    animation: eq10ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq10ani{
+    0%   {height: 35%;}
+    25%   {height: 41%;}
+    50%   {height: 53%;}
+    75%   {height: 76%;}
+    100%   {height: 35%;}
 }
 .eq11{
-    background-color: #99f7e2;
+    background-color: var(--eq11-night);
     height: 24%;
+    animation: eq11ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq11ani{
+    0%   {height: 24%;}
+    25%   {height: 9%;}
+    50%   {height: 61%;}
+    75%   {height: 73%;}
+    100%   {height: 24%;}
 }
 .eq12{
-    background-color: #9bf1f7;
+    background-color: var(--eq12-night);
     height: 47%;
+    animation: eq12ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq12ani{
+    0%   {height: 47%;}
+    25%   {height: 77%;}
+    50%   {height: 22%;}
+    75%   {height: 13%;}
+    100%   {height: 47%;}
 }
 .eq13{
-    background-color: #9ed9f8;
+    background-color: var(--eq13-night);
     height:64%;
+    animation: eq13ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq13ani{
+    0%   {height: 64%;}
+    25%   {height: 22%;}
+    50%   {height: 60%;}
+    75%   {height: 72%;}
+    100%   {height: 64%;}
 }
 .eq14{
-    background-color: #a0c2f9;
+    background-color: var(--eq14-night);
     height: 15%;
+    animation: eq14ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq14ani{
+    0%   {height: 15%;}
+    25%   {height: 79%;}
+    50%   {height: 20%;}
+    75%   {height: 59%;}
+    100%   {height: 15%;}
 }
 .eq15{
-    background-color: #a3acf9;
-    height: 13%
+    background-color: var(--eq15-night);
+    height: 13%;
+    animation: eq15ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq15ani{
+    0%   {height: 13%;}
+    25%   {height: 62%;}
+    50%   {height: 49%;}
+    75%   {height: 26%;}
+    100%   {height: 13%;}
 }
 .eq16{
-    background-color: #b5a6fa;
+    background-color: var(--eq16-night);
     height: 9%;
+    animation: eq16ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq16ani{
+    0%   {height: 9%;}
+    25%   {height: 45%;}
+    50%   {height: 62%;}
+    75%   {height: 28%;}
+    100%   {height: 9%;}
 }
 .eq17{
-    background-color: #cea8fb;
+    background-color: var(--eq17-night);
     height: 79%;
+    animation: eq17ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq17ani{
+    0%   {height: 79%;}
+    25%   {height: 64%;}
+    50%   {height: 16%;}
+    75%   {height: 54%;}
+    100%   {height: 79%;}
 }
 .eq18{
-    background-color: #e6abfc;
+    background-color: var(--eq18-night);
     height: 28%;
+    animation: eq18ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq18ani{
+    0%   {height: 28%;}
+    25%   {height: 2%;}
+    50%   {height: 69%;}
+    75%   {height: 39%;}
+    100%   {height: 28%;}
 }
 .eq19{
-    background-color: #fcadfb;
+    background-color: var(--eq19-night);
     height: 45%;
+    animation: eq19ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq19ani{
+    0%   {height: 45%;}
+    25%   {height: 64%;}
+    50%   {height: 17%;}
+    75%   {height: 51%;}
+    100%   {height: 45%;}
 }
 .eq20{
-    background-color: #fdb0e7;
+    background-color: var(--eq20-night);
     height: 54%;
+    animation: eq20ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq20ani{
+    0%   {height: 54%;}
+    25%   {height: 29%;}
+    50%   {height: 39%;}
+    75%   {height: 73%;}
+    100%   {height: 54%;}
 }
 .eq21{
-    background-color: #feb3d3;
+    background-color: var(--eq21-night);
     height: 75%;
+    animation: eq21ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq21ani{
+    0%   {height: 75%;}
+    25%   {height: 64%;}
+    50%   {height: 30%;}
+    75%   {height: 13%;}
+    100%   {height: 75%;}
 }
 .eq22{
-    background-color: #ffb6c0;
+    background-color: var(--eq22-night);
     height: 28%;
+    animation: eq22ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes eq22ani{
+    0%   {height: 28%;}
+    25%   {height: 40%;}
+    50%   {height: 6%;}
+    75%   {height: 24%;}
+    100%   {height: 28%;}
 }

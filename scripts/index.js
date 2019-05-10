@@ -54,6 +54,7 @@ $(document).ready(function(){
 });
 
 function openComputer(){
+    $(".screen_saver").animate({opacity:"0"});
     $(".computer").animate({
         "bottom":"0px",
         "height":"100vh",
@@ -80,6 +81,7 @@ function closeComputer(currentstate){
     if(currentstate !='day'){
         $(".shadow_effect").animate({opacity:"1"});
     }
+    $(".screen_saver").animate({opacity:"1"});
 };
 
 function openPhone(){
