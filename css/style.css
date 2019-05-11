@@ -468,21 +468,53 @@ body {
     border-radius: 15px;
     z-index: 150;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .browser{
     border: 3px solid var(--browser-border);
     opacity: 0;
     height: 100%;
-    box-sizing: border-box;
+    overflow: overlay;
 }
 .browser_bar {
+    position: absolute;
     padding: 10px;
     background: #f1f1f1;
     height: 25px;
+    width: 100%;
+}
+.browser_content{
+    margin-top:45px;
+    box-sizing: border-box;
+    background-color: var(--device-screen);
+    width:100%;
+    height: auto;
+    overflow: -webkit-paged-y
+}
+header{
+    margin: 15px auto;
+    max-width: 550px;
+}
+.browser_home{
+    font-family: 'Share Tech Mono', monospace;
+    color:white;
+    font-size: 40px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    display: -webkit-inline-box;
+}
+.browser_router{
+    list-style: none;
+    display: -webkit-inline-box;
+    color:white;
+    font-size: 20px;
+}
+.browser_router li{
+    margin-left:25px;
+    font-family: 'Share Tech Mono', monospace;
 }
 .search_bar{
-    display:inline-block;
+    display:-webkit-inline-box;
     box-sizing: border-box;
     background-color: #FFFFFF;
     height:25px;
@@ -502,6 +534,7 @@ body {
     position:absolute;
     right:30px;
     top:30px;
+    border-radius: 15px;
     z-index: 200;
     opacity: 0;
     cursor: pointer;
@@ -513,7 +546,8 @@ body {
     width: 2px;
     background-color: black;
     transform: rotate(45deg);
-    left:13px;
+    left:12px;
+    top:0px;
 }
 .browser_cross::before {
     position: absolute;;
@@ -522,7 +556,8 @@ body {
     width: 2px;
     background-color: black;
     transform: rotate(135deg);
-    left:13px;
+    left:12px;
+    top:0px;
 }
 .computer_stand{
     /* Alignment*/

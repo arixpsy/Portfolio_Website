@@ -4,7 +4,6 @@
     <title>PSY Arix</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="scripts/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -84,8 +83,25 @@
                     <div class="dot" style="background:#ED594A;"></div>
                     <div class="dot" style="background:#FDD800;"></div>
                     <div class="dot" style="background:#5AC05A;"></div>
-                    <div class="search_bar">https://www.myprojects.com</div>
-                  </div>
+                    <div class="search_bar">https://www.psy-arix.com</div>
+                </div>
+                <div class="browser_content" id="browser_content">
+                    <header>
+                        <div class="browser_home">PSY ARIX</div>
+                        <ul class="browser_router">
+                            <li>Projects</li>
+                            <li>Hobbies</li>
+                            <li>About Me</li>
+                        </ul>
+                    </header>
+                    <section>A</section>
+                    <section>B</section>
+                    <section>C</section>
+                    <section>D</section>
+                    <footer>
+
+                    </footer>
+                </div>
             </div>
         </div>
         <div class="computer_stand"></div>
@@ -121,32 +137,7 @@
 
         <div class="desk_bottom"></div>
     </div>
-    <script>
-        var clock = new Vue({
-            el: '#clock',
-            data: {
-                time: '',
-                date: ''
-            }
-        });
-
-        var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-        var timerID = setInterval(updateTime, 1000);
-        updateTime();
-        function updateTime() {
-            var cd = new Date();
-            clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
-            clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
-        };
-
-        function zeroPadding(num, digit) {
-            var zero = '';
-            for(var i = 0; i < digit; i++) {
-                zero += '0';
-            }
-            return (zero + num).slice(-digit);
-        }
-    </script>
+    <script src='scripts/clock.js'></script>
 </body>
 </html> 
 <!-- Created and Designed by P.S.Y Arix -->

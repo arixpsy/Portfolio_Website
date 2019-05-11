@@ -41,12 +41,14 @@ $(document).ready(function(){
     $(".moon").on('click', function(){
         skychange('toDay');
         MoonSunToggle('toDay');
+        eqChange('toDay');
         currentstate = 'day';
     });
 
     $(".sun").on('click', function(){
         skychange('toNight');
         MoonSunToggle('toNight');
+        eqChange('toNight');
         currentstate = 'day';
     });
     
@@ -215,6 +217,144 @@ function MoonSunToggle(to){
         $(".sun").animate({
             "top":"150px",
             "left":"-500px"
+        });
+    }
+}
+
+function eqChange(to){
+    if(to=='toDay'){
+        $(".eq1").css({
+            "background-color" : "var(--eq1-day)"
+        });
+        $(".eq2").css({
+            "background-color" : "var(--eq2-day)"
+        });
+        $(".eq3").css({
+            "background-color" : "var(--eq3-day)"
+        });
+        $(".eq4").css({
+            "background-color" : "var(--eq4-day)"
+        });
+        $(".eq5").css({
+            "background-color" : "var(--eq5-day)"
+        });
+        $(".eq6").css({
+            "background-color" : "var(--eq6-day)"
+        });
+        $(".eq7").css({
+            "background-color" : "var(--eq7-day)"
+        });
+        $(".eq8").css({
+            "background-color" : "var(--eq8-day)"
+        });
+        $(".eq9").css({
+            "background-color" : "var(--eq9-day)"
+        });
+        $(".eq10").css({
+            "background-color" : "var(--eq10-day)"
+        });
+        $(".eq11").css({
+            "background-color" : "var(--eq11-day)"
+        });
+        $(".eq12").css({
+            "background-color" : "var(--eq12-day)"
+        });
+        $(".eq13").css({
+            "background-color" : "var(--eq13-day)"
+        });
+        $(".eq14").css({
+            "background-color" : "var(--eq14-day)"
+        });
+        $(".eq15").css({
+            "background-color" : "var(--eq15-day)"
+        });
+        $(".eq16").css({
+            "background-color" : "var(--eq16-day)"
+        });
+        $(".eq17").css({
+            "background-color" : "var(--eq17-day)"
+        });
+        $(".eq18").css({
+            "background-color" : "var(--eq18-day)"
+        });
+        $(".eq19").css({
+            "background-color" : "var(--eq19-day)"
+        });
+        $(".eq20").css({
+            "background-color" : "var(--eq20-day)"
+        });
+        $(".eq21").css({
+            "background-color" : "var(--eq21-day)"
+        });
+        $(".eq22").css({
+            "background-color" : "var(--eq22-day)"
+        });
+    }else{
+        $(".eq1").css({
+            "background-color" : "var(--eq1-night)"
+        });
+        $(".eq2").css({
+            "background-color" : "var(--eq2-night)"
+        });
+        $(".eq3").css({
+            "background-color" : "var(--eq3-night)"
+        });
+        $(".eq4").css({
+            "background-color" : "var(--eq4-night)"
+        });
+        $(".eq5").css({
+            "background-color" : "var(--eq5-night)"
+        });
+        $(".eq6").css({
+            "background-color" : "var(--eq6-night)"
+        });
+        $(".eq7").css({
+            "background-color" : "var(--eq7-night)"
+        });
+        $(".eq8").css({
+            "background-color" : "var(--eq8-night)"
+        });
+        $(".eq9").css({
+            "background-color" : "var(--eq9-night)"
+        });
+        $(".eq10").css({
+            "background-color" : "var(--eq10-night)"
+        });
+        $(".eq11").css({
+            "background-color" : "var(--eq11-night)"
+        });
+        $(".eq12").css({
+            "background-color" : "var(--eq12-night)"
+        });
+        $(".eq13").css({
+            "background-color" : "var(--eq13-night)"
+        });
+        $(".eq14").css({
+            "background-color" : "var(--eq14-night)"
+        });
+        $(".eq15").css({
+            "background-color" : "var(--eq15-night)"
+        });
+        $(".eq16").css({
+            "background-color" : "var(--eq16-night)"
+        });
+        $(".eq17").css({
+            "background-color" : "var(--eq17-night)"
+        });
+        $(".eq18").css({
+            "background-color" : "var(--eq18-night)"
+        });
+        $(".eq19").css({
+            "background-color" : "var(--eq19-night)"
+        });
+        $(".eq20").css({
+            "background-color" : "var(--eq20-night)"
+        });
+        $(".eq21").css({
+            "background-color" : "var(--eq21-night)"
+        });
+        $(".eq22").css({
+            "background-color" : "var(--eq22-night)"
         });
     }
 }
