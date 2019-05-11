@@ -52,6 +52,54 @@ $(document).ready(function(){
         currentstate = 'day';
     });
     
+
+    $("#home").on('click',function(){
+        $('.pc2').removeClass('open')
+        $('.pc3').removeClass('open')
+        $('.pc4').removeClass('open')
+        $('.pc2').addClass('close')
+        $('.pc3').addClass('close')
+        $('.pc4').addClass('close')
+
+        $('.pc1').removeClass('close')
+        $('.pc1').addClass('open')
+    });
+
+    $("#projects").on('click',function(){
+        $('.pc1').removeClass('open')
+        $('.pc3').removeClass('open')
+        $('.pc4').removeClass('open')
+        $('.pc1').addClass('close')
+        $('.pc3').addClass('close')
+        $('.pc4').addClass('close')
+        
+        $('.pc2').removeClass('close')
+        $('.pc2').addClass('open')
+    });
+
+    $("#hobbies").on('click',function(){
+        $('.pc1').removeClass('open')
+        $('.pc2').removeClass('open')
+        $('.pc4').removeClass('open')
+        $('.pc1').addClass('close')
+        $('.pc2').addClass('close')
+        $('.pc4').addClass('close')
+        
+        $('.pc3').removeClass('close')
+        $('.pc3').addClass('open')
+    });
+
+    $("#aboutme").on('click',function(){
+        $('.pc1').removeClass('open')
+        $('.pc2').removeClass('open')
+        $('.pc3').removeClass('open')
+        $('.pc1').addClass('close')
+        $('.pc2').addClass('close')
+        $('.pc3').addClass('close')
+        
+        $('.pc4').removeClass('close')
+        $('.pc4').addClass('open')
+    });
     
 });
 
